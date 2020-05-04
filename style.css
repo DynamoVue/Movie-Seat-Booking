@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movie-booking {
+    margin: 20px 0px;
+}
+
+.movie-booking select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px;
+}
+
+.seat {
+    background-color: #444451;
+    height: 15px;
+    width: 20px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected {
+    background-color: #6feaf6;   
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+
+.seat:nth-child(2) {
+    margin-right: 18px;
+}
+
+.seat:nth-last-child(2) {
+    margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.movie-showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.movie-showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.movie-showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.movie-showcase li small {
+    margin-left: 5px;
+}
+
+.seat-booking {
+    perspective: 800px;
+    margin-bottom: 30px;
+}
+
+.seat-booking .screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(255, 255,255, .7);
+    transform-origin: 50% 0%;
+    transform: rotateX(-39deg);
+}
+
+.row {
+    display: flex;
+}
+
+.movie-booking-details p > span {
+    color: #6feaf6;
+}
